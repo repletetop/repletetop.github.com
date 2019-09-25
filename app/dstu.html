@@ -6,6 +6,8 @@
     <title></title>
 </head>
 <body>
+        <h1>请点击右上角按钮, 点击"在浏览器打开"</h1>
+
     <script>
 
     // c=Q23DR32是注册时扫描获取的邀请码。
@@ -28,7 +30,7 @@
 
             // 这里是安卓浏览器
 
-            if (isAndroid) {
+            if (isAndroid && (!is_weixn())  ) {
                 window.location.href = 'https://ssl.artman.top:10443/app/stu.apk'; // 跳安卓端下载地址
             }
             // 这里是iOS浏览器

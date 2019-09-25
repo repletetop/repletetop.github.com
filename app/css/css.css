@@ -28,7 +28,7 @@ p,ul, ol{ margin: 0;line-height: 2}
 
 
 /*  m5  begin */
-.m5{min-height: 12rem;padding: 0 .1rem;background-size: cover;}
+.m5{min-height: 12rem;padding: 0 .3rem;background-size: cover;}
 .m5Tit{text-align: center;font-size: .44rem;color: #333;font-weight: bold;}
 .m5Bri{font-size: .44rem;color: #3ea9b7;text-align: center;background-size: contain;}
 

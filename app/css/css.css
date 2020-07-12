@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document Edited by 木易 */
+* {margin:0;padding:0;outline:none;list-style:none;text-decoration:none;blr:expression(this.onFocus=this.blur()); box-sizing: border-box; }
+body,html {color:#333;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: 
+    grayscale;max-width:720px;background: #FFFFFF;font-family:arial, "微软雅黑", 
+    Microsoft YaHei;position: relative;font-size: .28rem;margin: 0 auto;}
+img {border:none;max-width: 100%;width: auto\9;height: auto;-ms-interpolation-mode: bicubic;_width:auto;  }
+input, textarea ,select{border:none;background:none;cursor:pointer;font-size:14px;vertical-align:middle;color:#333; font-family:arial, "微软雅黑", Microsoft YaHei;  }
+select {border:inherit;background: inherit; }
+/* a {text-decoration:none;blr:expression(this.onFocus=this.blur());outline: none;color:#333;  } */
+em, i {font-style:normal;  }
+/* a:focus, input, select {outline:none;  } */
+.clearfix {*zoom:1; clear: both; }
+.clearfix:after {content:"\200B"; display: block;clear: both;height: 0;  }
+input[type="submit"], input[type="reset"], input[type="button"], button, select {-webkit-appearance: none;  }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{ font-weight:sold ; padding: 0; margin: 0; line-height: 1.4;  font-family:arial, "微软雅黑", Microsoft YaHei;}
+p,ul, ol{ margin: 0;line-height: 2}
+
+.header{height: .3rem;background: #1b1b1b;padding: 0 .1rem;overflow: hidden;position: fixed;top: 0;width: 100%;max-width: 720px;z-index: 9999;}
+.logo{float: left;display: block;width: 1.57rem;height: .38rem;position: relative;top: .04rem;}
+
+.footer{background: #1b1b1b;height: .85rem;line-height: .85rem;overflow: hidden;position: fixed;bottom: 0;z-index: 9999;width: 100%;max-width: 720px;}
+.footer a{display: block;width: 50%;text-align: center;float: left;}
+.footer a em{display: inline-block;padding-left: .5rem;color: #fff;background: no-repeat left center;font-size: .26rem;}
+.footer .footZx{background: #f20202;}
+
+
+
+
+/*  m5  begin */
+.m5{min-height: 12rem;padding: 0 .3rem;background-size: cover;}
+.m5Tit{text-align: center;font-size: .44rem;color: #333;font-weight: bold;}
+.m5Bri{font-size: .44rem;color: #3ea9b7;text-align: center;background-size: contain;}
+
+/*返回悬浮按钮**/
+.btns{font-weight: bold;display: inline-block;width: 80px;height: 32px;border: #5fb878;
+    border-radius: 16px;
+    background: #5fb878;font-size: 1.0em;text-align: center;padding-top: 5px;color: white;}
+a:hover{color:#FFFFFF
+}

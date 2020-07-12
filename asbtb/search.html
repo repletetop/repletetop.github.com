@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>内部优惠券搜索</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+    <style>
+    /* 隐藏未编译的变量 */
+
+    [v-cloak] {
+      display: none;
+    }
+
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    body{
+        font:15px/1.3 'Open Sans', sans-serif;
+        color: #5e5b64;
+        text-align:center;
+    }
+
+    a, a:visited {
+        outline:none;
+        text-decoration:none;
+        color:#389dc1;
+    }
+    .text-wrapper {
+    white-space: pre-wrap;
+    }
+
+    a:hover{
+        text-decoration:none;
+    }
+
+    section, footer, header, aside, nav{
+        display: block;
+    }
+
+
+    /*-------------------------
+        搜索输入框
+    --------------------------*/
+
+    .bar{
+        background-color:#5c9bb7;
+        opacity: 0.9;
+
+        /* background-image:-webkit-linear-gradient(top, #5c9bb7, #5392ad);
+        background-image:-moz-linear-gradient(top, #5c9bb7, #5392ad);
+        background-image:linear-gradient(top, #5c9bb7, #5392ad); */
+
+        box-shadow: 0 1px 1px #ccc;
+        border-radius: 2px;
+        padding: 5px;
+        margin: 0px auto 15px;
+        /* position:relative; */
+        /* position: sticky; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* z-index: 0; */
+        z-index: 9999;
+        position: fixed;
+
+    }
+
+    .bar input{
+        background:#fff no-repeat 13px 13px;
+        border: none;
+        width: 100%;
+        line-height: 14px;
+        padding: 5px 0;
+
+        border-radius: 2px;
+        box-shadow: 0 2px 2px #c4c4c4 inset;
+        text-align: left;
+        font-size: 16px;
+        font-family: inherit;
+        color: #738289;
+        font-weight: bold;
+        outline: none;
+        text-indent: 20px;
+    }
+
+    ul{
+        list-style: none;
+        /* width: 428px; */
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    ul li{
+        border-bottom: 1px solid #ddd;
+        padding: 1px;
+        overflow: hidden;
+    }
+
+    ul li img{
+        width:160px;
+        height:160px;
+        float:left;
+        border:none;
+    }
+
+    ul li p{
+        margin-left: 100px;
+        font-weight: bold;
+        padding-top: 2px;
+        color:#6e7a7f;
+        white-space: pre-wrap;
+    }
+    </style>
+
+</head>
+<body>
+
+<form id="main" v-cloak>
+    <div class="bar">
+        <!-- searchString 模型与文本域创建绑定 -->
+        <input type="text" v-model="searchString" placeholder="输入搜索内容" />
+        <p>{{ answer }}</p>
+    </div>
+    <br><br><br/>
+    <ul id="listview0">
+        <!-- 循环输出数据 -->             
+        <li v-for="coupon in filteredCoupons">
+            <a v-bind:href="coupon[3]"><img v-bind:src="coupon[1]" /></a>
+            <a v-bind:href="coupon[3]" ><p css="text-wrapper">{{coupon[2]}}</p></a>
+        </li>
+    </ul>
+
+</form>
+
+<script src="tj.min.js"></script>
+</body>
+</html>

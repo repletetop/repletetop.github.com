@@ -132,7 +132,7 @@
 </head>
 <body>
 
-<form id="main" v-cloak>
+<el-form id="main" @submit.native.prevent v-cloak>
     <div class="bar">
         <!-- searchString 模型与文本域创建绑定 -->
         <input type="text" v-model="searchString" placeholder="输入搜索内容" />
@@ -147,7 +147,7 @@
         </li>
     </ul>
 
-</form>
+</el-form>
 
 <script src="tj.min.js"></script>
 </body>
